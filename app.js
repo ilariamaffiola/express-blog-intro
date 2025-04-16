@@ -44,7 +44,7 @@ app.get('/', (req, res)=>{
 app.get('/bacheca', (req, res) => {
     let food = req.query.food;
     let filteredPosts = posts.filter((post) =>{
-        return post.tags.includes(food);
+        return post.immagine.includes(food);
         
     });
     res.json(filteredPosts);
