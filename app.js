@@ -4,6 +4,8 @@ const port = 3000;
 
 app.get('/', (req, res)=>{
     res.send('Server del mio blog');
+});
+app.get('/bacheca', (req, res) => {
     let posts = [
         {
             titolo: 'ciambellone',
@@ -36,6 +38,7 @@ app.get('/', (req, res)=>{
             tags: ['torta', 'cioccolato', 'amaretti']
         }
     ];
+    res.send(posts);
 });
 
 app.listen(port, () => {
