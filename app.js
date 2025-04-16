@@ -38,7 +38,7 @@ app.get('/bacheca', (req, res) => {
             tags: ['torta', 'cioccolato', 'amaretti']
         }
     ];
-    res.json(posts);
+    //res.json(posts);
     let food = req.query.food;
     let filteredPosts = posts.filter((post) =>{
         return post.tags.includes(food);
