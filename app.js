@@ -38,7 +38,13 @@ app.get('/bacheca', (req, res) => {
             tags: ['torta', 'cioccolato', 'amaretti']
         }
     ];
-    res.send(posts);
+    res.json(posts);
+    let food = req.query.food;
+    let filteredPosts = posts.filter((post) =>{
+        return post.tags.includes(food);
+        
+    });
+    res.json(filteredPosts);
 });
 
 app.listen(port, () => {
